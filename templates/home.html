@@ -8,5 +8,12 @@
 <body>
     <h2>Benvenuto, {{ username }}</h2>
     <a href="{{ url_for('logout') }}">Esci</a>
+    <br>
+    <a href="/get_info_astronauti">Info astronauti</a>
+    <ul>
+        {% for astronaut in data %}
+            <li>{{astronaut.craft}} - {{astronaut.name}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
